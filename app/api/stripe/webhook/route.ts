@@ -55,4 +55,4 @@ export async function POST(req: Request) {
   return NextResponse.json({ received: true });
 }
 
-export const config = { runtime: "nodejs" };
+export const runtime = "nodejs";
