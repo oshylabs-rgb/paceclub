@@ -10,28 +10,39 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: "1.25rem",
       screens: { "2xl": "1280px" }
     },
     extend: {
       colors: {
-        background: "hsl(0 0% 100%)",
-        foreground: "hsl(20 14% 4%)",
-        muted: "hsl(60 5% 96%)",
-        mutedForeground: "hsl(25 5% 45%)",
-        accent: "hsl(16 100% 50%)",
-        accentForeground: "hsl(0 0% 100%)",
-        border: "hsl(20 6% 90%)",
-        ring: "hsl(16 100% 50%)"
+        // Brand & Build Guide v1.0 — exact hex
+        background: "#fafaf7",       // Chalk
+        foreground: "#0a0a0b",       // Ink
+        muted: "#f3f0eb",            // Slightly darker Chalk for subtle surfaces
+        mutedForeground: "#737070",  // Concrete
+        accent: "#ff5a1f",           // Track Orange
+        accentForeground: "#fafaf7", // Chalk on orange
+        border: "#e6e2dc",           // Hairline
+        ring: "#ff5a1f",             // Track Orange focus ring
+        paceMint: "#5dd39e",         // Streaks, success, "going" RSVPs
+        laneSky: "#3284c4"           // Sponsorship, info
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["Space Grotesk", "Inter", "system-ui", "sans-serif"]
       },
       borderRadius: {
-        lg: "0.875rem",
-        md: "0.625rem",
-        sm: "0.375rem"
+        sm: "0.375rem",  // 6px chips
+        md: "0.625rem",  // 10px buttons
+        lg: "0.875rem",  // 14px cards
+        xl: "1.5rem"     // 24px modals
+      },
+      letterSpacing: {
+        tightest: "-0.02em",
+        eyebrow: "0.18em"
+      },
+      boxShadow: {
+        soft: "0 8px 30px rgba(10, 10, 11, 0.08)"
       },
       keyframes: {
         "fade-in": {
@@ -40,7 +51,7 @@ const config: Config = {
         }
       },
       animation: {
-        "fade-in": "fade-in 0.4s ease-out"
+        "fade-in": "fade-in 0.5s ease-out"
       }
     }
   },

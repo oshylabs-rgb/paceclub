@@ -1,50 +1,49 @@
 const features = [
   {
     title: "One page per club",
-    body: "City, pace bands, schedule, photo, social links. Ranks on Google for [your city] run club so new runners find you."
+    body: "City, pace bands, schedule, photo. Ranks on Google for your city's run club search."
   },
   {
-    title: "RSVP with caps and waitlist",
-    body: "Set a session limit. When it fills, runners auto-waitlist. No more 60 people turning up for a 30-runner workout."
+    title: "RSVP with caps",
+    body: "Set a session limit. When it fills, runners auto-waitlist. No more 60 people for a 30-runner workout."
   },
   {
     title: "Attendance in one tap",
-    body: "Check runners in from your phone. Streaks built automatically. CSV export for sponsors at month end."
+    body: "Check runners in from your phone. Streaks built automatically. CSV export at month end."
   },
   {
     title: "One message to everyone",
-    body: "Replaces the WhatsApp broadcast list and the email blast and the Instagram story. One message, every member."
+    body: "Replaces the WhatsApp broadcast and the email blast and the Instagram story. One message."
   },
   {
     title: "Strava-friendly",
-    body: "Sign in with Strava. Sessions auto-link to your Strava activity. We do not compete with Strava on tracking. We sit on top of it."
+    body: "Sign in with Strava. Sessions auto-link to your activity. We do not compete on tracking."
   },
   {
     title: "Free up to 50 members",
-    body: "Most clubs never need to pay. Pro is £15 a month and only kicks in when you cross 50. No per-seat shenanigans."
+    body: "Most clubs never need to pay. Pro is £15 a month and only kicks in when you cross 50."
   }
 ];
 
 export function FeatureGrid() {
   return (
-    <section id="how" className="py-20">
+    <section id="how" className="py-20 lg:py-28">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-semibold sm:text-4xl">
+          <p className="eyebrow">How it works</p>
+          <h2 className="mt-4 font-display text-3xl font-semibold tracking-tightest sm:text-4xl">
             What PaceClub actually does
           </h2>
-          <p className="mt-4 text-mutedForeground">
-            We built the v1 scope by reading three years of organizer complaints
-            on the Strava Community Hub. Every feature traces back to a
-            real club leader asking for it.
+          <p className="mt-4 text-base text-mutedForeground sm:text-lg">
+            Every feature traces back to a real club organizer asking for it.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
-            <div key={f.title} className="card">
-              <h3 className="font-display text-lg font-semibold">{f.title}</h3>
-              <p className="mt-2 text-sm text-mutedForeground">{f.body}</p>
-            </div>
+            <article key={f.title} className="card">
+              <h3 className="font-display text-lg font-semibold tracking-tightest">{f.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-mutedForeground">{f.body}</p>
+            </article>
           ))}
         </div>
       </div>
